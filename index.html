@@ -67,7 +67,7 @@
     <article id="post-Cache" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/07/Cache/" class="article-date">
-  <time datetime="2020-04-07T06:34:37.500Z" itemprop="datePublished">2020-04-07</time>
+  <time datetime="2020-04-07T07:00:15.861Z" itemprop="datePublished">2020-04-07</time>
 </a>
     
   </div>
@@ -86,14 +86,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="什么是Cache"><a href="#什么是Cache" class="headerlink" title="什么是Cache?"></a><strong>什么是Cache?</strong></h1><p>Cache即高速缓冲存储器，也是 ARM920T 存储系统中的重要组成部分，它用来缓存一小部分内存中的内容。</p>
+        <h1 id="什么是Cache"><a href="#什么是Cache" class="headerlink" title="什么是Cache?"></a><strong>什么是Cache?</strong></h1><p>Cache即高速缓冲存储器，是存储系统中的重要组成部分，它用来缓存一小部分内存中的内容。</p>
 <p>我们知道，程序和数据都是存放在内存中的，CPU 要执行程序就要访问内存。内存一般是用 SDRAM 芯片做的，出于技术和成本问题无法让内存的速度和 CPU 的速度一样快，通常内存的速度比 CPU 的速度慢很多。于是内存的速度成了制约系统性能的关键。</p>
 <p>人们观察到 CPU 访问内存并不是完全随机的。在某个时间段内，CPU 总是访问当前内存地址的相邻内存地址，想象一下指令顺序执行和循环执行的情景，这种情景就是著名的程序局部性原理，人们在 CPU 与内存之间加了一个小而快的存储器，它的速度和CPU 的速度差不多，事实上它还是慢那么一点点，但是它比内存快得多。它就是高速缓冲存储器即 Cache。</p>
 <p>Cache在CPU中的位置大概如下图，以ARM920T内核为例：</p>
-<p><img src="C:%5CUsers%5C26451%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200407142821890.png" alt="image-20200407142821890"></p>
+<p><img src="https://raw.githubusercontent.com/kvm-rui/kvm-rui.github.io/master/image/cache%E4%BD%8D%E7%BD%AE.png" alt="image-20200407142821890"></p>
 <h1 id="Cache的工作机制"><a href="#Cache的工作机制" class="headerlink" title="Cache的工作机制"></a><strong>Cache的工作机制</strong></h1><p>Cache把整个内存分成大小相同的块，块的大小因不同 Cache 芯片的实现而不同。因此Cache 内部的地址就是由块号和块内偏移组成的。</p>
 <p>逻辑上 Cache 的工作机制，如下图所示。可能与具体的实现有所差别。</p>
-<p><img src="C:%5CUsers%5C26451%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200407115654330.png" alt="image-20200407115654330"></p>
+<p><img src="https://raw.githubusercontent.com/kvm-rui/kvm-rui.github.io/master/image/cache%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6.png" alt="image-20200407115654330"></p>
 <p>Cache 的运行如下。</p>
 <p>第 1 步：Cache 收到 CPU 访问内存的地址。</p>
 <p>第 2 步：Cache 的地址变换逻辑，把 CPU 访问内存的地址分解成块号和块内偏移。</p>
@@ -129,7 +129,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/07/Cache/" data-id="ck8pj47zw0000o7e2a3im6p80" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/07/Cache/" data-id="ck8pk0y4e0000r2e20cdqbo79" class="article-share-link">Share</a>
       
       
     </footer>
@@ -166,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/30/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" data-id="ck8ej54ah0001e2e2dy47961b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/30/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" data-id="ck8pk0y4x0002r2e289r22jk9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/30/hello-world/" data-id="ck8ej54ac0000e2e2cs799zqx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/30/hello-world/" data-id="ck8pk0y4t0001r2e2a7ex4pw8" class="article-share-link">Share</a>
       
       
     </footer>
